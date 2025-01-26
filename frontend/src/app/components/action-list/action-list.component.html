@@ -1,0 +1,14 @@
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Action</th>
+      <th>Date</th>
+      <th>Points</th>
+    </tr>
+    <tr *ngFor="let action of actions">
+      <td>{{ action.id }}</td>
+      <td>{{ action.action }}</td>
+      <td>{{ action.date }}</td>
+      <td>{{ action.points }}</td>
+    </tr>
+  </table>
