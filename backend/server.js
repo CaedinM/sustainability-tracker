@@ -27,16 +27,27 @@ app.get('/api/actions', (req, res) => {
 
 // Create POST Endpoint: Add a new action
 app.post('/api/actions', (req, res) => {
-    const newAction = req.body;
-    // validate action
-    if (!newAction.id || !newAction.action || !newAction.date || !newAction.points) {
-        return res.status(400).json({ error: "Invalid action data" });
-    }
 
     fs.readFile(DATA_FILE, (err, data) => {
         if (err) return res.status(500).json({ error: "Failed to read data" });
 
         const actions = JSON.parse(data);
+
+        // generate next ID in sequential order
+        const nextId = actions.length > 0 ? Math.max(...actions.map(a => a.id)) + 1 : 1;
+
+        const newAction = {
+            id: nextId, // assign next available ID
+            action: req.body.action?.trim(),
+            date: req.body.date,
+            points: Number(req.body.points)
+        };
+
+        // validate action
+        if (!newAction.action || !newAction.date || !newAction.points) {
+        return res.status(400).json({ error: "Invalid action data" });
+        }
+
         actions.push(newAction);
 
         fs.writeFile(DATA_FILE, JSON.stringify(actions, null, 2), (err) => {
@@ -44,6 +55,12 @@ app.post('/api/actions', (req, res) => {
             res.status(201).json(newAction);
         });
     });
+});
+
+// Centralized error handling for unexpected errors
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: "Something went wrong on the server" });
 });
 
 // Start the server
