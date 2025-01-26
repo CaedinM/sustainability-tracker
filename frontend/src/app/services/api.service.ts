@@ -15,6 +15,8 @@ export class ApiService {
   }
 
   addAction(action: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, action);
+    return this.http.post<any>(this.apiUrl, action, {
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }

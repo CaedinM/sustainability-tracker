@@ -20,10 +20,16 @@ export class ActionFormComponent {
   submitForm(): void {
     const newAction = {
       id: Math.floor(Math.random() * 1000),
-      action: this.action,
+      action: this.action.trim(), // trim leading/trailing spaces
       date: this.date,
-      points: parseInt(this.points, 10)
+      points: this.points ? Number(this.points) : null
     };
+
+    // validates inputs
+    if (!newAction.action || !newAction.date || newAction.points === null || isNaN(newAction.points)) {
+      alert('Please fill in all fields correctly.');
+      return;
+    }
 
     this.apiService.addAction(newAction).subscribe(() => {
       alert('Action added successfully');

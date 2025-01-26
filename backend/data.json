@@ -10,5 +10,11 @@
     "action": "Recycling",
     "date": "2025-02-10",
     "points": 30
+  },
+  {
+    "id": 553,
+    "action": "Reusing",
+    "date": "2025-01-25",
+    "points": 20
   }
 ]
