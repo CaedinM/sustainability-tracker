@@ -4,10 +4,10 @@ import { ActionFormComponent } from './components/action-form/action-form.compon
 
 @Component({
   selector: 'app-root',
-  standalone: true, // ✅ Ensure app.component is also standalone
+  standalone: true, // Ensure app.component is also standalone
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [ActionListComponent, ActionFormComponent] // ✅ Import the standalone components
+  imports: [ActionListComponent, ActionFormComponent]
 })
 export class AppComponent {
   title = 'Sustainability Tracker';
