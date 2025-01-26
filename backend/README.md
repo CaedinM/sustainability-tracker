@@ -1,7 +1,7 @@
 # Sustainability Tracker - Backend
 
 This is the backend API for the Sustainability Tracker project.  
-This backend was built using Node.js, and Express.js. It provides RESTful API endpoints to add and track sustainability actions.
+The backend is built using Node.js, and Express.js. It provides RESTful API endpoints to add and track sustainability actions.
 
 ---
 
@@ -13,9 +13,12 @@ Ensure you have the following installed on your system:
 
 ### **Installation**
 Clone this repository and install dependencies:
-- `git clone https://github.com/CaedinM/sustainability-tracker.git`
-- `cd sustainability-tracker/backend`
-- `npm install`
+```sh
+git clone https://github.com/CaedinM/sustainability-tracker.git
+cd sustainability-tracker/backend`
+npm install
+```
+
 
 ### **Running the Backend**
 Start the server using `node server.js`  

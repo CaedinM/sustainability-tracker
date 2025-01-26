@@ -18,8 +18,8 @@ export class ActionFormComponent {
   constructor(private apiService: ApiService) {}
 
   submitForm(): void {
+    // create an object containing user inputs
     const newAction = {
-      id: Math.floor(Math.random() * 1000),
       action: this.action.trim(), // trim leading/trailing spaces
       date: this.date,
       points: this.points ? Number(this.points) : null
@@ -31,6 +31,7 @@ export class ActionFormComponent {
       return;
     }
 
+    // send action to backend API
     this.apiService.addAction(newAction).subscribe(() => {
       alert('Action added successfully');
       this.action = '';

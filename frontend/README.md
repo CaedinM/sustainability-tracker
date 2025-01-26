@@ -1,7 +1,7 @@
 # Sustainability Tracker - Frontend  
 
 This is the frontend for the Sustainability Tracker project.  
-The frontend is built using **Angular** and provides an interactive UI for adding and tracking sustainability actions.
+The frontend is built using Angular and provides an interactive UI for adding and tracking sustainability actions.
 
 ---
 

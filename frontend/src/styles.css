@@ -1,1 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #28a745;
+  }
+  
+  table {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    margin-bottom: 0.5rem; /* Adds extra space below inputs */
+  }
+
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px; /* Adds spacing */
+  }
+
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers components horizontally */
+    justify-content: center; /* Centers them vertically */
+    width: 100vw; /* Ensures full width */
+    text-align: center; /* Ensures text inside is centered */
+  }
+  
+  app-action-form, app-action-list {
+    width: 50%; /* Adjusts width to be centered properly */
+    min-width: 400px; /* Ensures it does not get too small */
+  }
+
+  app-action-list {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    width: 100%; /* Ensures full width */
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Reduce gap even further */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+  
+  .form-container div {
+    flex: 1;
+    min-width: 120px; /* Reduce input width */
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 2px; /* Reduce padding inside inputs */
+    font-size: 13px; /* Make text smaller */
+  }
+  
+  .form-container label {
+    font-size: 15px; /* Form Labels (Action, Date, Points) */
+  }
+  
+  .text-center {
+    margin-top: 10px; /* Spacing before the submit button */
+  }
+  
+  /* Divider line between action-form and action-list */
+  .divider {
+    width: 80%; /* Line width */
+    height: 2px; /* Line thickness */
+    background-color: #28a745; /* Line color */
+    margin: 20px auto; /* Adds spacing and centers it */
+  }
