@@ -17,9 +17,10 @@ Ensure you have the following installed on your system:
 Clone this repository and install dependencies:
 ```sh
 git clone https://github.com/CaedinM/sustainability-tracker.git
-cd sustainability-tracker/backend`
+cd sustainability-tracker/frontend
 npm install
 ```
+
 ### **Running the Frontend**
 Start the Angular server using `ng serve --open`  
 The frontend UI will open in your default browser at localhost:4200
