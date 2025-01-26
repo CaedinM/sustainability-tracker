@@ -11,8 +11,19 @@ Ensure you have the following installed on your system:
 ### **Installation**
 Clone this repository and install dependencies:
 ```sh
+# Clone the repository
 git clone https://github.com/CaedinM/sustainability-tracker.git
+```
+```sh
+# Navigate to the backend and install dependencies
 cd sustainability-tracker/backend
+npm install
+
+# Navigate back to the root folder
+cd -
+
+# Navigate to the frontend and install dependencies
+cd frontend
 npm install
 ```
 
