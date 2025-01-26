@@ -12,7 +12,7 @@ Ensure you have the following installed on your system:
 Clone this repository and install dependencies:
 ```sh
 git clone https://github.com/CaedinM/sustainability-tracker.git
-cd sustainability-tracker/backend`
+cd sustainability-tracker/backend
 npm install
 ```
 
